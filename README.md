@@ -1,8 +1,8 @@
-## How to install ros2 foxy
+# How to install ros2 foxy
 
 OS : wsl2-ubuntu20.04
 
-# Setup locale
+## Setup locale
 
 $ sudo apt update && sudo apt install locales
 
@@ -12,7 +12,7 @@ $ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
 $ export LANG=en_US.UTF-8
 
-# setup source
+## setup source
 
 $ sudo apt update && sudo apt install curl gnupg2 lsb-release
 
@@ -20,13 +20,13 @@ $ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key 
 
 $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-# install ros2 package
+## install ros2 package
 
 $ sudo apt update
 
 $ sudo apt install ros-foxy-desktop ros-foxy-rmw-fastrtps* ros-foxy-rmw-cyclonedds*
  
-# install development tools
+## install development tools
 
 $ sudo apt update && sudo apt install -y build-essential cmake git libbullet-dev python3-colcon-common-extensions python3-flake8  python3-pip python3-pytest-cov python3-rosdep python3-setuptools python3-vcstool wget
 
@@ -35,7 +35,7 @@ $ python3 -m pip install -U argcomplete flake8-blind-except flake8-builtins flak
 $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcunit1-dev
 
 
-# How to configure network for WSL2
+# How to configure bridged network for WSL2
 1. 윈도우즈 검색창에 그룹정책편집 검색 또는 gpedit.msc 입력후 엔터
 
 ![image](https://github.com/user-attachments/assets/c7f1d5c6-77e4-46f4-b082-926672a985be)
@@ -66,11 +66,14 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/600b1e19-99b6-4458-91ff-b26079700a7f)
 
-mirrored mode 사용시
-
-[WSL2]
-networkingMode=mirrored
-
 8. wsl2-ubuntu20.04 실행하고 ifconfig 명령실행하면 192.168.0.x 형식의 ip주소가 할당되어야 함 -> wsl2가 무선공유기에 직접 연결되었음을 의미
 
 ![image](https://github.com/user-attachments/assets/650ee692-d441-4e2d-a689-4e305a2827a4)
+
+# How to configure mirrored network for WSL2
+
+mirrored mode 사용시에는 .wslconfig 파일의 내용을 다음처럼 수정
+
+[WSL2]
+
+networkingMode=mirrored
