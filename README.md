@@ -1,4 +1,4 @@
-# How to install ros2 foxy
+## How to install ros2 foxy
 
 OS : wsl2-ubuntu20.04
 
