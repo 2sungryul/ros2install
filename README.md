@@ -66,3 +66,6 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/600b1e19-99b6-4458-91ff-b26079700a7f)
 
+8. wsl2-ubuntu20.04 실행하고 ifconfig 명령실행하면 192.168.0.x 형식의 ip주소가 할당되어야 함 -> wsl2가 무선공유기에 직접 연결되었음을 의미
+
+![image](https://github.com/user-attachments/assets/650ee692-d441-4e2d-a689-4e305a2827a4)
