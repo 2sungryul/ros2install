@@ -36,7 +36,7 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 
 # How to configure network for WSL2
-1. 윈도우검색창에 그룹정책편집 검색 또는 gpedit.msc 입력후 엔터
+1. 윈도우즈 검색창에 그룹정책편집 검색 또는 gpedit.msc 입력후 엔터
 
 ![image](https://github.com/user-attachments/assets/c7f1d5c6-77e4-46f4-b082-926672a985be)
 
@@ -44,7 +44,7 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/d58a6961-d2fb-4e98-accf-e1dfc3dd0aa5)
 
-3. 윈도우검색창에 hyper-v 관리자 검색 후 엔터
+3. 윈도우즈 검색창에 hyper-v 관리자 검색 후 엔터
 
 ![image](https://github.com/user-attachments/assets/fab0310a-f988-4904-8adf-fc8c2ac67cc5)
 
@@ -52,6 +52,10 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/34540f5f-4f7b-4b19-8abc-13bf45af9ee2)
 
-5. 가상스위치 만들기 메뉴에서 -> 이름 external, 연결형식은 외부 네트워크, 무선랜카드선택, 나머지는 선택하지 말것 ->확인
+5. 가상스위치 만들기 메뉴에서 -> 이름 external, 연결형식은 외부 네트워크, 연결할 무선랜카드선택, 나머지는 선택하지 말것 -> 확인
 
 ![image](https://github.com/user-attachments/assets/838af903-03d3-49e9-9e54-7b42a6e024df)
+
+6. 윈도우즈 설정 -> 네트워크 및 인터넷 -> 네트워크 브리지 생성 확인
+
+![image](https://github.com/user-attachments/assets/95349d22-86b4-4ecd-92a0-5fe1e8700afe)
