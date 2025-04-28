@@ -44,3 +44,6 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/d58a6961-d2fb-4e98-accf-e1dfc3dd0aa5)
 
+3. 윈도우검색창에 hyper-v 관리자 검색 후 엔터
+
+![image](https://github.com/user-attachments/assets/fab0310a-f988-4904-8adf-fc8c2ac67cc5)
