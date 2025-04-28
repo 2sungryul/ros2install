@@ -35,7 +35,7 @@ $ python3 -m pip install -U argcomplete flake8-blind-except flake8-builtins flak
 $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcunit1-dev
 
 
-# How to configure bridged network for WSL2
+# How to configure bridged networking mode for WSL2
 1. 윈도우즈 검색창에 그룹정책편집 검색 또는 gpedit.msc 입력후 엔터
 
 ![image](https://github.com/user-attachments/assets/c7f1d5c6-77e4-46f4-b082-926672a985be)
@@ -70,9 +70,9 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/650ee692-d441-4e2d-a689-4e305a2827a4)
 
-# How to configure mirrored network for WSL2
+# How to configure mirrored networking mode for WSL2
 
-mirrored mode 사용시에는 .wslconfig 파일의 내용을 다음처럼 수정
+mirrored networking mode 사용시에는 .wslconfig 파일의 내용을 다음처럼 수정
 
 [WSL2]
 
