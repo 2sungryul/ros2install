@@ -47,3 +47,11 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 3. 윈도우검색창에 hyper-v 관리자 검색 후 엔터
 
 ![image](https://github.com/user-attachments/assets/fab0310a-f988-4904-8adf-fc8c2ac67cc5)
+
+4. 우측창의 가상스위치 관리자 클릭 -> 우측 가상스위치만들기 클릭
+
+![image](https://github.com/user-attachments/assets/34540f5f-4f7b-4b19-8abc-13bf45af9ee2)
+
+5. 가상스위치 만들기 메뉴에서 -> 이름 external, 연결형식은 외부 네트워크, 무선랜카드선택, 나머지는 선택하지 말것 ->확인
+
+![image](https://github.com/user-attachments/assets/838af903-03d3-49e9-9e54-7b42a6e024df)
