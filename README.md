@@ -60,11 +60,16 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 ![image](https://github.com/user-attachments/assets/95349d22-86b4-4ecd-92a0-5fe1e8700afe)
 
-7. 윈도우즈 폴더 C:\Users\<사용자id> 아래에 .wslconfig 이름의 텍스트 파일생성(확장자없어야함), 내용은 메모장열고 아래처럼 작성
+7. 윈도우즈 폴더 C:\Users\\<사용자id> 아래에 .wslconfig 이름의 텍스트 파일생성(확장자없어야함), 내용은 메모장열고 아래처럼 작성
 
 ![image](https://github.com/user-attachments/assets/81bddf53-3865-404c-b0a2-6700988e8177)
 
 ![image](https://github.com/user-attachments/assets/600b1e19-99b6-4458-91ff-b26079700a7f)
+
+mirrored mode 사용시
+
+[WSL2]
+networkingMode=mirrored
 
 8. wsl2-ubuntu20.04 실행하고 ifconfig 명령실행하면 192.168.0.x 형식의 ip주소가 할당되어야 함 -> wsl2가 무선공유기에 직접 연결되었음을 의미
 
