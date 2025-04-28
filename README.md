@@ -37,8 +37,8 @@ $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcun
 
 # How to configure network for WSL2
 1. 윈도우검색창에 그룹정책편집 검색 또는 gpedit.msc 입력후 엔터
-   ![image](https://github.com/user-attachments/assets/c7f1d5c6-77e4-46f4-b082-926672a985be)
+![image](https://github.com/user-attachments/assets/c7f1d5c6-77e4-46f4-b082-926672a985be)
 
 2. 좌측창 -> 컴퓨터구성 -> 관리템플릿 -> 네트워크 -> Windows 연결관리자 -> 인터넷 또는 Windows 도메인에 대한 동시 연결수 최소화 -> 좌측 0 = 동시연결허용 설정 ->확인
-   ![image](https://github.com/user-attachments/assets/d58a6961-d2fb-4e98-accf-e1dfc3dd0aa5)
+![image](https://github.com/user-attachments/assets/d58a6961-d2fb-4e98-accf-e1dfc3dd0aa5)
 
