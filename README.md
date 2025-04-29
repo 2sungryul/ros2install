@@ -77,3 +77,12 @@ mirrored networking mode 사용시에는 .wslconfig 파일의 내용을 다음�
 [WSL2]
 
 networkingMode=mirrored
+
+# How to install gstreamer on wsl2-Ubuntu20.04
+
+$ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+
+# how to receive image from Jetson camera on wsl2-Ubuntu20.04
+
+$ gst-launch-1.0 -v udpsrc port=8001 ! application/x-rtp,encoding-name=H264,payload=96 ! rtph2
+64depay ! queue ! avdec_h264 ! videoconvert! autovideosink
