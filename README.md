@@ -35,32 +35,22 @@ $ python3 -m pip install -U argcomplete flake8-blind-except flake8-builtins flak
 $ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcunit1-dev
 
 ## add to .bashrc
-
+```bash
+# ros2 init
 source /opt/ros/jazzy/setup.bash
-
 source ~/ros2_ws/install/local_setup.bash
-
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
-
 source /usr/share/vcstool-completion/vcs.bash
-
 source /usr/share/colcon_cd/function/colcon_cd.sh
-
 export LIBGL_ALWAYS_SOFTWARE=1
-
 export _colcon_cd_root=~/ros2_ws 
-
 export ROS_DOMAIN_ID=0
-
 export ROS_NAMESPACE=jetson0
-
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-
 export RCUTILS_COLORIZED_OUTPUT=1 
-
 export RCUTILS_LOGGING_USE_STDOUT=0 
-
 export RCUTILS_LOGGING_BUFFERED_STREAM=1
+```
 
 
 
