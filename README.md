@@ -2,7 +2,7 @@
 
 OS : wsl2-ubuntu24.04
 
-## Setup locale
+## Set locale
 ```bash
 $ sudo apt update && sudo apt install locales
 $ sudo locale-gen en_US en_US.UTF-8
@@ -10,16 +10,25 @@ $ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 $ export LANG=en_US.UTF-8
 $ locale  # verify settings
 ```
-## setup source
+## Enable required repositories
 ```bash
-$ sudo apt update && sudo apt install curl gnupg2 lsb-release
-$ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository universe
+$ sudo apt update && sudo apt install curl -y
+$ export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
+$ curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo ${UBUNTU_CODENAME:-${VERSION_CODENAME}})_all.deb"
+$ sudo dpkg -i /tmp/ros2-apt-source.deb 
+```
+## Install ros development tools
+```bash
+$ sudo apt update && sudo apt install ros-dev-tools
 ```
 ## install ros2 package
 ```bash
 $ sudo apt update
-$ sudo apt install ros-foxy-desktop ros-foxy-rmw-fastrtps* ros-foxy-rmw-cyclonedds*
+$ sudo apt upgrade
+$ sudo apt install ros-jazzy-desktop
+$ sudo apt install ros-jazzy-ros-base
 ``` 
 ## install development tools
 ```bash
@@ -44,7 +53,19 @@ export RCUTILS_COLORIZED_OUTPUT=1
 export RCUTILS_LOGGING_USE_STDOUT=0 
 export RCUTILS_LOGGING_BUFFERED_STREAM=1
 ```
-
+## Setup environment
+```bash
+$ source /opt/ros/jazzy/setup.bash
+```
+## Try some examples
+```bash
+# In one terminal, source the setup file and then run a C++
+$ source /opt/ros/jazzy/setup.bash
+$ ros2 run demo_nodes_cpp talker
+# In another terminal source the setup file and then run a Python
+$ source /opt/ros/jazzy/setup.bash
+$ ros2 run demo_nodes_py listener
+```
 
 # How to install ros2 foxy
 
